@@ -1,0 +1,17 @@
+{
+    "name": "com.bennykok.rgs.editor",
+    "references": [
+        "GUID:ad0640414aa49284c86e79cdc4c083ad"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

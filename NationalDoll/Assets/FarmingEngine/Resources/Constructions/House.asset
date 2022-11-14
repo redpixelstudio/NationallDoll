@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a336e45a3accee14bbb503c02af80756, type: 3}
+  m_Name: House
+  m_EditorClassIdentifier: 
+  id: house
+  title: House
+  icon: {fileID: 21300000, guid: 890925c8e0854104fb1610de6c4fe547, type: 3}
+  desc: A nice place to sleep.
+  groups:
+  - {fileID: 11400000, guid: 41ef3d1b2b7917e48be57952de7a0bbf, type: 2}
+  craftable: 0
+  craft_quantity: 1
+  craft_duration: 2
+  craft_sort_order: 1
+  craft_near: {fileID: 0}
+  craft_items:
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: ff17a3d8277ae7747bfb1f6f538bdd45, type: 2}
+  - {fileID: 11400000, guid: 2a498b4f16a2b81459327a397e98c4a5, type: 2}
+  - {fileID: 11400000, guid: 2a498b4f16a2b81459327a397e98c4a5, type: 2}
+  - {fileID: 11400000, guid: 2a498b4f16a2b81459327a397e98c4a5, type: 2}
+  - {fileID: 11400000, guid: 2a498b4f16a2b81459327a397e98c4a5, type: 2}
+  - {fileID: 11400000, guid: 2a498b4f16a2b81459327a397e98c4a5, type: 2}
+  craft_fillers: []
+  craft_requirements:
+  - {fileID: 11400000, guid: 91a4afcde98c435590fbc1083a1022a2, type: 2}
+  craft_sound: {fileID: 8300000, guid: a959259a1dc64384291aa531cc0f73b1, type: 3}
+  construction_prefab: {fileID: 5747276960350570009, guid: e6e9482f9fab25448aebc8cddd990891,
+    type: 3}
+  take_item_data: {fileID: 0}
+  durability_type: 0
+  durability: 0

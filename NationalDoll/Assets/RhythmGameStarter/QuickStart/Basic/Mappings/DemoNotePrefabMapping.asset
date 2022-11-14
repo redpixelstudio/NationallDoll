@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc7143b8421ffa4c8482bcce31d9f98, type: 3}
+  m_Name: DemoNotePrefabMapping
+  m_EditorClassIdentifier: 
+  referenceRootOctave: 3
+  ignoreOctave: 0
+  ignoreName: 1
+  notesPrefab:
+  - prefab: {fileID: 8397699897526961635, guid: a8bbe05f24310734da5700943f3421a9,
+      type: 3}
+    poolSize: 20
+  - prefab: {fileID: 1528742009364248792, guid: 05192b8f8c9bd1d409159c60ca73689b,
+      type: 3}
+    poolSize: 6
+  - prefab: {fileID: 7212494586997379943, guid: 8f235079eb2b08a4693eec17f84ef888,
+      type: 3}
+    poolSize: 6
+  - prefab: {fileID: 7212494586997379943, guid: 9bca2e7c699534e99b2a3e588d9d3ccf,
+      type: 3}
+    poolSize: 6
+  mapping:
+  - notePrefabIndex: 1
+    noteName: 0
+    noteOctave: 4
+  - notePrefabIndex: 3
+    noteName: 0
+    noteOctave: 5
+  - notePrefabIndex: 2
+    noteName: 0
+    noteOctave: 6

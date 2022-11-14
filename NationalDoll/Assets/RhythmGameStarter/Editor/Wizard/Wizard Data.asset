@@ -1,0 +1,254 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3221ece1ed1a24386f3d69184bb10b, type: 3}
+  m_Name: Wizard Data
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:RhythmGameStarter:WizardData
+  wizardVersionId: 4
+  header: Rhythm Game Starter
+  packageJson: {fileID: 4900000, guid: fe2a87c162726d643ae2f5d2a2eaee2d, type: 3}
+  message: I am the "smart" wizard to get you started with this asset.
+  buttonLinks:
+  - referenceSceneObjectName: 
+    referenceAssetPath: 
+    actionText: Online Docs
+    url: https://bennykok.gitbook.io/rhythm-game-starter/
+  - referenceSceneObjectName: 
+    referenceAssetPath: 
+    actionText: Discord
+    url: https://discord.gg/fHGsArj
+  - referenceSceneObjectName: 
+    referenceAssetPath: 
+    actionText: Asset Store
+    url: https://assetstore.unity.com/packages/templates/systems/rhythm-game-starter-160117
+  wizardActionGroups:
+  - groupName: Getting Started
+    actions:
+    - question: Setup
+      answer: First, take a look at the project setup steps!
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Setup
+        url: https://bennykok.gitbook.io/rhythm-game-starter/getting-started
+    - question: Demo Scenes?
+      answer: Start by looking at the demo first!
+      wActions:
+      - referenceSceneObjectName: RhythmCore4Tracks
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Vertical4TracksDemo.unity
+        actionText: Basic Demo
+        url: 
+      - referenceSceneObjectName: RhythmCore
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful
+          Vertical.unity
+        actionText: Colorful Demo
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful
+          Vertical Complete.unity
+        actionText: Complete Demo
+        url: 
+    - question: Where do I start first?
+      answer: You can check out the overview of the core system setup.
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Overview
+        url: https://bennykok.gitbook.io/rhythm-game-starter/hierarchy-overview
+  - groupName: Importing Songs
+    actions:
+    - question: How to import songs
+      answer: 'You can import mp3, wav, ogg.
+
+        By design, each clip should
+        be wrapped in a SongItem object.
+
+        Check out how the the SongItem
+        is configured there.'
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Shared/Songs
+        actionText: Songs Folder
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Shared/Songs/Rhythm/Rhythm.asset
+        actionText: SongItem
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Importing Songs
+        url: https://bennykok.gitbook.io/rhythm-game-starter/importing-songs
+  - groupName: Note Sequence
+    actions:
+    - question: Import from Midi
+      answer: 'If you have DAW, you can import the sequence from your exported midi
+        data directly.
+
+        Learn more about Midi import in the link.'
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Shared/Songs/The
+          Best Moment/The Best Moment 128bpm.mid
+        actionText: Example Midi
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Shared/Songs/The
+          Best Moment/The Best Moment.asset
+        actionText: Imported Sequence
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: About Midi
+        url: https://bennykok.gitbook.io/rhythm-game-starter/note-sequences/midi-import
+    - question: Note Recorder [New]
+      answer: "In 0.5+, Note Recorder is introduced, allows you to create sequence
+        as you play through the game with the same input.\n\nThe Recorder Prefab
+        should be compatible with rgs's RhythmCore's prefabs structure, therefore
+        you can drag & drop the prefab into existing scene. \n\nMore details in the
+        online docs & video!"
+      wActions:
+      - referenceSceneObjectName: Note Recorder
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful
+          Vertical Recording Mode.unity
+        actionText: Recorder Demo
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/Prefabs/Note Recorder.prefab
+        actionText: Recorder Prefab
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Recording Mode
+        url: https://bennykok.gitbook.io/rhythm-game-starter/note-sequences/recording-mode
+    - question: From Sequence Editor
+      answer: 'If you only have the audio clips, you can use the built-in sequence
+        editor for some basic sequence editing
+
+
+        Head over to the Project
+        window, under the menu "Create/Rhythm Game/Song Item" to create a blank SongItem
+        to get started!'
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Creating Sequence
+        url: https://bennykok.gitbook.io/rhythm-game-starter/sequence-editor-new
+    - question: Generator [Experimental]
+      answer: As 0.4.0, Introduced the Generator interface for custom sequence generation
+        via code, and it is experimental stage, but you can go ahead and play with
+        the settings
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Procedural/The
+          Best Moment Procedural.asset
+        actionText: Generated SongItem
+        url: 
+  - groupName: Input System [NEW]
+    actions:
+    - question: Can I use Unity's new Input System?
+      answer: 'Yes, but first, you need to enable the InputSystem by going to Edit/Project
+        Settings/Player, look for "Active Input Hnadling", and set to Both or Only
+        the Input System Package (New), then Unity will require a restart.
+
+
+        Starting
+        from 0.9, rgs support InputSystem 1.1.0, here is two demo scenes you can
+        try with.'
+      wActions:
+      - referenceSceneObjectName: RhythmCore4Tracks
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Vertical4TracksDemo
+          Input System.unity
+        actionText: Basic
+        url: 
+      - referenceSceneObjectName: RhythmCore
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful
+          Vertical Recording Mode Input System.unity
+        actionText: Recorder
+        url: 
+    - question: Configure the deault InputActionAsset?
+      answer: "You can modify the default InputActionAsset, or duplicated it to add
+        in other key bindings for the track action and swipe key\r. \n\nNext, assign
+        your new InputActionAsset to the InputSystemHandler component in the RhthrmCore
+        GameObject."
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Basic/InputSystem/Keyboard
+          Controls.inputactions
+        actionText: Default InputActionAsset
+        url: 
+      - referenceSceneObjectName: RhythmCore4Tracks
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Vertical4TracksDemo
+          Input System.unity
+        actionText: InputSystemHandler
+        url: 
+  - groupName: Mappings
+    actions:
+    - question: Note & Track mapping
+      answer: Each note is mapped to a corresponding track via the MidiTrackMapping
+        assets
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/Mappings/DefaultMidiTrackMapping.asset
+        actionText: MidiTrackMapping
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: 
+        url: https://bennykok.gitbook.io/rhythm-game-starter/track-mapping
+    - question: Note & Prefab mapping
+      answer: 'Each note is mapped to a note prefab via the NotePrefabMapping assets
+
+
+        Also
+        take a look at the Note Prefab implementation in the Colorful demo, and the
+        easier way to have custom note is by duplicating the demo Note Prefab.'
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Basic/Mappings/DemoNotePrefabMapping.asset
+        actionText: NotePrefabMapping
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Prefabs/Notes/Colorful
+          Note.prefab
+        actionText: Note Prefab Demo
+        url: 
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: 
+        url: https://bennykok.gitbook.io/rhythm-game-starter/midi-prefab-mapping
+    - question: Mappings
+      answer: Both Mappings are required by the TrackManager
+      wActions:
+      - referenceSceneObjectName: RhythmCore
+        referenceAssetPath: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful
+          Vertical.unity
+        actionText: TrackManager
+        url: 
+  - groupName: FAQ
+    actions:
+    - question: Frequently Asked Questions
+      answer: Some real life FAQ scenario, might have an answer for you
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Online FAQ
+        url: https://bennykok.gitbook.io/rhythm-game-starter/faq
+  - groupName: Changelog
+    actions:
+    - question: View changelog
+      answer: BACKUP FIRST before considering an update, and check for changelog
+        to see if any scripts you edited has been updated. You may want to consider
+        to stick with the old version if you changed any core scripts.
+      wActions:
+      - referenceSceneObjectName: 
+        referenceAssetPath: 
+        actionText: Online Changelog
+        url: https://bennykok.gitbook.io/rhythm-game-starter/development/changelog

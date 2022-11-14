@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d016e04ccb58e33469bedc8e02168847, type: 3}
+  m_Name: PepperPlant
+  m_EditorClassIdentifier: 
+  id: pepper_plant
+  title: Pepper Plant
+  icon: {fileID: 21300000, guid: 133d6ae5beab78a49b6cf6baf6d04dee, type: 3}
+  desc: Grows tomatoes
+  groups: []
+  craftable: 0
+  craft_quantity: 1
+  craft_duration: 0
+  craft_sort_order: 0
+  craft_near: {fileID: 0}
+  craft_items: []
+  craft_fillers: []
+  craft_requirements: []
+  craft_sound: {fileID: 8300000, guid: a959259a1dc64384291aa531cc0f73b1, type: 3}
+  plant_prefab: {fileID: 3201309627310344135, guid: 982179a9edb467f47ab447fd2c1f2ec9,
+    type: 3}
+  growth_stage_prefabs:
+  - {fileID: 4938540728644661369, guid: 8f07d54d670e49544a4c454202e8dd4c, type: 3}
+  - {fileID: 1023968600406995185, guid: 2082b668b48338a45a0d2498bcfb7893, type: 3}
+  - {fileID: 3201309627310344135, guid: 982179a9edb467f47ab447fd2c1f2ec9, type: 3}

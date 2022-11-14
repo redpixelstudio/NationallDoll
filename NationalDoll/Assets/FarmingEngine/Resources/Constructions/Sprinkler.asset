@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a336e45a3accee14bbb503c02af80756, type: 3}
+  m_Name: Sprinkler
+  m_EditorClassIdentifier: 
+  id: sprinkler
+  title: Sprinkler
+  icon: {fileID: 21300000, guid: 423c7f43f5c1fe24b986fcf28b09eee4, type: 3}
+  desc: Water plants surrounding it.
+  groups:
+  - {fileID: 11400000, guid: ac998e4eeb8f0b743977b6e978e94583, type: 2}
+  craftable: 1
+  craft_quantity: 1
+  craft_duration: 0
+  craft_sort_order: 2
+  craft_near: {fileID: 0}
+  craft_items:
+  - {fileID: 11400000, guid: 2a15992b76b7ef64ab85a3da1cecbfba, type: 2}
+  - {fileID: 11400000, guid: 2a15992b76b7ef64ab85a3da1cecbfba, type: 2}
+  - {fileID: 11400000, guid: 2a15992b76b7ef64ab85a3da1cecbfba, type: 2}
+  craft_fillers: []
+  craft_requirements: []
+  craft_sound: {fileID: 8300000, guid: a959259a1dc64384291aa531cc0f73b1, type: 3}
+  construction_prefab: {fileID: 5268362974172124911, guid: 0db18d70a37c27544a271c5bd2c5f299,
+    type: 3}
+  take_item_data: {fileID: 0}
+  durability_type: 0
+  durability: 0

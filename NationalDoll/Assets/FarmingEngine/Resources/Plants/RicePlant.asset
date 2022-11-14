@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d016e04ccb58e33469bedc8e02168847, type: 3}
+  m_Name: RicePlant
+  m_EditorClassIdentifier: 
+  id: rice_plant
+  title: Rice Plant
+  icon: {fileID: 21300000, guid: dd760ba7ec7740c8a696b78aa8556459, type: 3}
+  desc: 
+  groups: []
+  craftable: 0
+  craft_quantity: 1
+  craft_duration: 0
+  craft_sort_order: 0
+  craft_near: {fileID: 0}
+  craft_items: []
+  craft_fillers: []
+  craft_requirements: []
+  craft_sound: {fileID: 8300000, guid: a959259a1dc64384291aa531cc0f73b1, type: 3}
+  plant_prefab: {fileID: 6703374024125575816, guid: b4be4b38358a4e38956337afe3524598,
+    type: 3}
+  growth_stage_prefabs:
+  - {fileID: 6703374024125575816, guid: b4be4b38358a4e38956337afe3524598, type: 3}
+  - {fileID: 3118529917767483703, guid: 5fe82919947f4ca399ab05c07b2bbc26, type: 3}
+  - {fileID: 3646894389723712506, guid: 4968a20f922f4e2cbff4380c2f8cf5c7, type: 3}

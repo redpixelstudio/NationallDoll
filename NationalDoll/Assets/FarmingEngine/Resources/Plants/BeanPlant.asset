@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d016e04ccb58e33469bedc8e02168847, type: 3}
+  m_Name: BeanPlant
+  m_EditorClassIdentifier: 
+  id: bean_plant
+  title: Bean Plant
+  icon: {fileID: 21300000, guid: 83484cf588851db478e3ac0cb1c47282, type: 3}
+  desc: Grows corn
+  groups: []
+  craftable: 0
+  craft_quantity: 1
+  craft_duration: 0
+  craft_sort_order: 0
+  craft_near: {fileID: 0}
+  craft_items: []
+  craft_fillers: []
+  craft_requirements: []
+  craft_sound: {fileID: 8300000, guid: a959259a1dc64384291aa531cc0f73b1, type: 3}
+  plant_prefab: {fileID: 3201309627310344135, guid: f26e0ae1722bb60489dd22defbf304ca,
+    type: 3}
+  growth_stage_prefabs:
+  - {fileID: 4938540728644661369, guid: 151d5dce3ee53794889ab717c1dc5503, type: 3}
+  - {fileID: 1023968600406995185, guid: 9deb2d7ece752384b8472992e0c46f57, type: 3}
+  - {fileID: 3201309627310344135, guid: f26e0ae1722bb60489dd22defbf304ca, type: 3}

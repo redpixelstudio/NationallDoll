@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c93f2f06ebe048e49a68d95d2a722367
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_PersistentViewDataDictionary: {instanceID: 0}
+  - mesh: {instanceID: 0}
+  - icon: {instanceID: 0}
+  - settings: {fileID: 11400000, guid: ad2809f45234ad14ea5c8c16bafaaac6, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

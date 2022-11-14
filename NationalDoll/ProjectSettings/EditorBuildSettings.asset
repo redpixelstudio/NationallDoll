@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Shared/Scenes/Demo Selection.unity
+    guid: f66bdf6930153bc4e93f838dfd22966c
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful Vertical.unity
+    guid: 555f16c4143216e41ab1f8b34b6de267
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful Vertical Procedural
+      Sequence.unity
+    guid: 490fe7cf15209974ebd83d81d2d9ecc3
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful Vertical Recording
+      Mode.unity
+    guid: 9cd208214d04ef145a0f140f23e95570
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Vertical4TracksDemo.unity
+    guid: 1eb35e2215b261040b67c67e4782c711
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Horizontal6TracksDemo.unity
+    guid: 448dc77d944d49c4193642d92fc30caa
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Basic/Scenes/Vertical4TracksDemo Input
+      System.unity
+    guid: fd6ce20fe82bb864484b04c8c894c208
+  - enabled: 1
+    path: Assets/RhythmGameStarter/QuickStart/Colorful/Scenes/Colorful Vertical Complete.unity
+    guid: 5e348a5f3b00842458a97a2761923240
   m_configObjects: {}

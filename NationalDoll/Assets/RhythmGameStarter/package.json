@@ -1,0 +1,11 @@
+{
+    "name": "com.bennykok.rhythm-core",
+    "displayName": "Rhythm Core",
+    "description": "Core of RhythmGameStarter",
+    "version": "0.10.3",
+    "standard-version": {
+        "scripts": {
+            "postchangelog": "npx replace-in-file '/gitlab.com/BennyKok/rhythm-game-starter//g' 'gitlab.com/BennyKok/rhythm-core/' CHANGELOG.md --isRegex"
+        }
+    }
+}
