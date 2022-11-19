@@ -15,6 +15,7 @@ namespace FarmingEngine
     [RequireComponent(typeof(UniqueID))]
     public class Character : Craftable
     {
+        [SerializeField] private Animator animator;
         [Header("Character")]
         public CharacterData data;
 
@@ -426,6 +427,8 @@ namespace FarmingEngine
         //Hit the target and deal damage
         private void DoAttackStrike()
         {
+            if(animator != null)
+                animator.SetTrigger("Attack");
             float range = (target.transform.position - transform.position).magnitude;
             if (range < GetAttackTargetHitRange())
             {
@@ -438,10 +441,14 @@ namespace FarmingEngine
 
             if (selectable.IsNearCamera(20f))
                 TheAudio.Get().PlaySFX("character", attack_audio);
+            if(animator != null)
+                animator.SetTrigger("Walk");
         }
 
         public void MoveTo(Vector3 pos)
         {
+            if(animator != null)
+                animator.SetTrigger("Walk");
             move_target = pos;
             move_target_avoid = pos;
             target = null;
@@ -555,12 +562,16 @@ namespace FarmingEngine
             is_attacking = false;
             move_timer = 0f;
             direct_move = false;
+            if(animator != null)
+                animator.SetTrigger("Idle");
         }
 
         public void StopMove()
         {
             move_target = transform.position;
             is_moving = false;
+            if(animator != null)
+                animator.SetTrigger("Idle");
         }
 
         public void Kill()

@@ -68,7 +68,7 @@ namespace FarmingEngine
 
             if (animator.enabled)
             {
-                SetAnimBool(move_anim, !gameplay_paused && character.IsMoving());
+                SetAnimBool (move_anim, !gameplay_paused && character.IsMoving());
                 SetAnimBool(craft_anim, !gameplay_paused && character.Crafting.IsCrafting());
                 SetAnimBool(sleep_anim, character.IsSleeping());
                 SetAnimBool(fish_anim, character.IsFishing());

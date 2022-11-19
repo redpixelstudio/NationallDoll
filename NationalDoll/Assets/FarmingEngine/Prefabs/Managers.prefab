@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1760342932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760342933}
+  - component: {fileID: 1760342934}
+  m_Layer: 0
+  m_Name: Rythm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760342933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760342932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2946928522140459501}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1760342934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760342932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b394e2fd19d19614ba3950e2ada1dab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rhythmObject: {fileID: 0}
+  playerControlsObject: {fileID: 5511775144176669967}
+  uiObject: {fileID: 0}
 --- !u!1 &2946928521743776463
 GameObject:
   m_ObjectHideFlags: 0
@@ -28,6 +75,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2946928522140459501}
   m_RootOrder: 0
@@ -82,14 +130,16 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2946928521743776460}
   - {fileID: 2946928523758381683}
   - {fileID: 9171846025894188462}
   - {fileID: 3687633651478310948}
   - {fileID: 2946928523737745979}
+  - {fileID: 1760342933}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2946928523737745956
 GameObject:
@@ -119,6 +169,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2946928522140459501}
   m_RootOrder: 4
@@ -184,6 +235,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2946928522140459501}
   m_RootOrder: 1
@@ -232,6 +284,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2946928522140459501}
   m_RootOrder: 2
@@ -249,18 +302,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_id: 0
-  action_ikey: 1
-  attack_ikey: 51
-  jump_ikey: 55
-  cam_rotate_left_ikey: 31
-  cam_rotate_right_ikey: 19
-  craft_ikey: 17
-  ui_select_ikey: 2
-  ui_use_ikey: 52
-  ui_cancel_ikey: 65
-  menu_accept_ikey: 2
-  menu_cancel_ikey: 65
-  menu_pause_ikey: 60
+  action_key: 32
+  attack_key: 304
+  jump_key: 306
+  cam_rotate_left: 113
+  cam_rotate_right: 101
+  craft_key: 99
+  ui_select: 13
+  ui_use: 303
+  ui_cancel: 8
+  menu_accept: 13
+  menu_cancel: 8
+  menu_pause: 27
   gamepad_controls: 0
   gamepad_linked: 0
 --- !u!114 &5080202787646276063
@@ -296,17 +349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_id: 0
-  action: 6
-  attack: 7
-  attack2: 11
-  jump: 4
-  use: 7
-  craft: 10
-  menu_accept: 6
-  menu_cancel: 5
-  menu_pause: 12
-  camera_left: 32
-  camera_right: 33
 --- !u!1 &9212905892387575967
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +378,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2946928522140459501}
   m_RootOrder: 3

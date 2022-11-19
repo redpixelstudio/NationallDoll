@@ -109,7 +109,7 @@ namespace FarmingEngine
             //Animations
             if (animator.enabled)
             {
-                animator.SetBool("Move", IsMoving());
+                animator.SetTrigger("Move");
                 animator.SetBool("Run", IsMoving());
             }
         }

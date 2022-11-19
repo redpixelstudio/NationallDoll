@@ -217,6 +217,11 @@ namespace FarmingEngine
             freelook = freelook.normalized * Mathf.Min(freelook.magnitude, 1f);
         }
 
+        public void Stop()
+        {
+            move = Vector3.zero;
+        }
+
         public Vector3 GetMove() { return move; }
         public Vector2 GetFreelook() { return freelook; }
         public bool IsMoving() { return move.magnitude > 0.1f; }

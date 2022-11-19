@@ -436,6 +436,7 @@ namespace FarmingEngine
             {
                 scene_transition = true;
                 StartCoroutine(GoToDayRoutine());
+                RhythmController.I.hasBeenUsed = false;
             }
         }
 

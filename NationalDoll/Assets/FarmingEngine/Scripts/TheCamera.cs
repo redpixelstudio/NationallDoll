@@ -199,6 +199,11 @@ namespace FarmingEngine
             }
         }
 
+        public void ToggleCameraMove()
+        {
+            move_enabled = !move_enabled;
+        }
+
         public void SetLockMode(bool locked)
         {
             if (is_locked != locked)
