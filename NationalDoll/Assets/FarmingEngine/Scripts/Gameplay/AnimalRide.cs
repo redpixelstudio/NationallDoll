@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace FarmingEngine
@@ -78,7 +80,7 @@ namespace FarmingEngine
 
         }
 
-        void Update()
+        async void Update()
         {
             if (TheGame.Get().IsPaused())
                 return;
@@ -109,8 +111,7 @@ namespace FarmingEngine
             //Animations
             if (animator.enabled)
             {
-                animator.SetTrigger("Move");
-                animator.SetBool("Run", IsMoving());
+                //animator.SetBool("Run", IsMoving());
             }
         }
 

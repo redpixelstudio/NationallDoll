@@ -447,8 +447,11 @@ namespace FarmingEngine
 
         public void MoveTo(Vector3 pos)
         {
-            if(animator != null)
+            if (animator != null)
+            {
                 animator.SetTrigger("Walk");
+                animator.SetBool("Run", true);
+            }
             move_target = pos;
             move_target_avoid = pos;
             target = null;
@@ -464,6 +467,8 @@ namespace FarmingEngine
         //Meant to be called every frame, for this reason don't do navmesh
         public void DirectMoveTo(Vector3 pos)
         {
+            if(animator != null)
+                animator.SetTrigger("Walk");
             move_target = pos;
             move_target_avoid = pos;
             target = null;
@@ -570,8 +575,12 @@ namespace FarmingEngine
         {
             move_target = transform.position;
             is_moving = false;
-            if(animator != null)
+            if (animator != null)
+            {
                 animator.SetTrigger("Idle");
+                animator.SetBool("Run",false);
+            }
+            
         }
 
         public void Kill()

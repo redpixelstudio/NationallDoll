@@ -44,8 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b394e2fd19d19614ba3950e2ada1dab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasBeenUsed: 0
+  canBeActivated: 1
   rhythmObject: {fileID: 0}
   playerControlsObject: {fileID: 5511775144176669967}
+  cameraObject: {fileID: 0}
+  playerObject: {fileID: 0}
+  blackSprite: {fileID: 0}
+  blackImage: {fileID: 0}
   uiObject: {fileID: 0}
 --- !u!1 &2946928521743776463
 GameObject:
@@ -273,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9171846025894188462
 Transform:
   m_ObjectHideFlags: 0

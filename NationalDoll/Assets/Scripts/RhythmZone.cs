@@ -18,6 +18,7 @@ public class RhythmZone : MonoBehaviour
             }
             else
             {
+                RhythmController.I.uiObject.ToggleRhythm(true);
                 sprite.color = Color.cyan;
                 RhythmController.I.canBeActivated = true;
             }
@@ -30,6 +31,7 @@ public class RhythmZone : MonoBehaviour
         {
             sprite.color = Color.white;
             RhythmController.I.canBeActivated = false;
+            RhythmController.I.uiObject.ToggleRhythm(false);
         }
     }
 }

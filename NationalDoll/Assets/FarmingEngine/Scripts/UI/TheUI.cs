@@ -19,6 +19,9 @@ namespace FarmingEngine
         public PausePanel pause_panel;
         public GameOverPanel game_over_panel;
 
+        [Header("Rhythm")] 
+        public Button rhythmObject;
+
         [Header("Material")]
         public Material ui_material;
         public Material text_material;
@@ -51,8 +54,21 @@ namespace FarmingEngine
             }
         }
 
+        public void OpenRhythm()
+        {
+            RhythmController.I.ChangeRhythmGameState(true);
+        }
+
+        public void ToggleRhythm(bool needOpen)
+        {
+            rhythmObject.gameObject.SetActive(needOpen);
+        }
+
         private void Start()
         {
+            RhythmController.I.uiObject = this;
+            rhythmObject.gameObject.SetActive(false);
+            rhythmObject.onClick.AddListener(OpenRhythm);
             canvas.worldCamera = TheCamera.GetCamera();
 
             if (!TheGame.IsMobile() && ItemSelectedFX.Get() == null && AssetData.Get().item_select_fx != null)
