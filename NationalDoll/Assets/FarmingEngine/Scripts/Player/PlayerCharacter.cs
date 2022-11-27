@@ -58,9 +58,9 @@ namespace FarmingEngine
         private PlayerCharacterJump character_jump;
         private PlayerCharacterSwim character_swim;
         private PlayerCharacterClimb character_climb;
-        private PlayerCharacterRide character_ride;
+        public PlayerCharacterRide character_ride;
         private PlayerCharacterHoe character_hoe;
-        private PlayerCharacterAnim character_anim;
+        public PlayerCharacterAnim character_anim;
 
         private Vector3 move;
         private Vector3 facing;

@@ -10,9 +10,9 @@ public class RhythmZone : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.TryGetComponent<PlayerCharacter>(out _))
+        if (other.gameObject.TryGetComponent<PlayerCharacter>(out var player))
         {
-            if (RhythmController.I.hasBeenUsed)
+            if (RhythmController.I.hasBeenUsed || player.IsRiding())
             {
                 sprite.color = Color.yellow;
             }

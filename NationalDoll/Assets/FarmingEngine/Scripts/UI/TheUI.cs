@@ -21,6 +21,8 @@ namespace FarmingEngine
 
         [Header("Rhythm")] 
         public Button rhythmObject;
+        [Header("Riding")]
+        public Button ridingObject;
 
         [Header("Material")]
         public Material ui_material;
@@ -56,7 +58,17 @@ namespace FarmingEngine
 
         public void OpenRhythm()
         {
-            RhythmController.I.ChangeRhythmGameState(true);
+            RhythmController.I.InitSong();
+        }
+
+        public void StopRiding()
+        {
+            RhythmController.I.playerObject.character_ride.StopRide();
+        }
+
+        public void ToggleRide(bool needOpen)
+        {
+            ridingObject.gameObject.SetActive(needOpen);
         }
 
         public void ToggleRhythm(bool needOpen)
@@ -68,7 +80,9 @@ namespace FarmingEngine
         {
             RhythmController.I.uiObject = this;
             rhythmObject.gameObject.SetActive(false);
+            ridingObject.gameObject.SetActive(false);
             rhythmObject.onClick.AddListener(OpenRhythm);
+            ridingObject.onClick.AddListener(StopRiding);
             canvas.worldCamera = TheCamera.GetCamera();
 
             if (!TheGame.IsMobile() && ItemSelectedFX.Get() == null && AssetData.Get().item_select_fx != null)

@@ -33,7 +33,7 @@ namespace FarmingEngine
         public string climb_anim = "Climb";
 
         private PlayerCharacter character;
-        private Animator animator;
+        public Animator animator;
 
         void Awake()
         {

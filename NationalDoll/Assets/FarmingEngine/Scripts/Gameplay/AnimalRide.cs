@@ -111,7 +111,20 @@ namespace FarmingEngine
             //Animations
             if (animator.enabled)
             {
-                //animator.SetBool("Run", IsMoving());
+                if (IsMoving())
+                {
+                    if(!animator.GetBool("Run"))
+                    {
+                        animator.SetBool("Run", true);
+                    }
+                }
+                else
+                {
+                    if(animator.GetBool("Run"))
+                    {
+                        animator.SetBool("Run", false);
+                    }
+                }
             }
         }
 

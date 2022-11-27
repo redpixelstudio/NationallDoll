@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using FarmingEngine;
 using RhythmGameStarter;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Task = System.Threading.Tasks.Task;
 
@@ -15,10 +16,11 @@ public class RhythmController : MonoBehaviour
     
     [HideInInspector] public bool canBeActivated;
     
-    [SerializeField] private SongManager rhythmObject;
+    [FormerlySerializedAs("rhythmObject")] [SerializeField] private SongManager songManager;
     [SerializeField] private PlayerControls playerControlsObject;
     [SerializeField] private TheCamera cameraObject;
-    [SerializeField] private PlayerCharacter playerObject;
+    [SerializeField] public PlayerCharacter playerObject;
+    [SerializeField] private SongChooser songChooser;
 
     [HideInInspector] public TheUI uiObject;
 
@@ -28,35 +30,59 @@ public class RhythmController : MonoBehaviour
     private Quaternion playerLastRotation;
 
     private bool isOpened;
+    private bool isDancing;
 
     private RhythmController()
     {
         I = this;
     }
 
-    public async void ChangeRhythmGameState(bool isToOpen)
+    public async void InitSong()
+    {
+        songChooser ??= FindObjectOfType<SongChooser>();
+        songChooser.choosingCanvas.gameObject.SetActive(true);
+        uiObject.ToggleRhythm(false);
+        playerControlsObject.gameObject.SetActive(false);
+        uiObject.gameObject.SetActive(false);
+        await songChooser.WaitForSong();
+        songManager ??= FindObjectOfType<SongManager>();
+        songManager.defaultSong = songChooser.chosenSong;
+        ChangeRhythmGameState(true);
+    }
+
+    private async void ChangeRhythmGameState(bool isToOpen)
     {
         if (hasBeenUsed) return;
         if (!canBeActivated) return;
         isOpened = isToOpen;
-        uiObject.ToggleRhythm(false);
         if (isToOpen)
         {
             playerControlsObject.gameObject.SetActive(!isOpened);
             playerControlsObject.Stop();
             uiObject.gameObject.SetActive(!isOpened);
             await PlayAnimation(isOpened);
-            rhythmObject ??= FindObjectOfType<SongManager>();
-            rhythmObject.gameObject.SetActive(isOpened);
+            songManager ??= FindObjectOfType<SongManager>();
+            songManager.gameObject.SetActive(isOpened);
+            Dance();
         }
         else
         {
-            rhythmObject ??= FindObjectOfType<SongManager>();
-            rhythmObject.gameObject.SetActive(isOpened);
+            songManager ??= FindObjectOfType<SongManager>();
+            songManager.gameObject.SetActive(isOpened);
             await PlayAnimation(isOpened);
             uiObject.gameObject.SetActive(!isOpened);
             playerControlsObject.gameObject.SetActive(!isOpened);
             playerControlsObject.Stop();
+        }
+    }
+
+    private async void Dance()
+    {
+        while (isDancing)
+        {
+            playerObject.character_anim.animator.SetTrigger("Dance");
+            Debug.Log("Change Dance set!");
+            await Task.Delay(TimeSpan.FromSeconds(0.75));
         }
     }
 
@@ -88,6 +114,8 @@ public class RhythmController : MonoBehaviour
             }
             var newPositionedCameraObject = cameraObject.gameObject;
             playerLastPosition = newPositionedCameraObject.transform.position;
+            isDancing = true;
+            playerObject.character_anim.animator.SetBool("IsDancing", isDancing);
         }
         else
         {
@@ -100,6 +128,8 @@ public class RhythmController : MonoBehaviour
             }
             playerObject.rotate_speed = 400;
             cameraObject.ToggleCameraMove();
+            isDancing = false;
+            playerObject.character_anim.animator.SetBool("IsDancing", isDancing);
         }
         canBeActivated = true;
     }
@@ -122,5 +152,15 @@ public class RhythmController : MonoBehaviour
         ChangeEnergy(10);
         ChangeRhythmGameState(false);
         hasBeenUsed = true;
+    }
+
+    private void Start()
+    {
+        isDancing = false;
+    }
+
+    private void OnDestroy()
+    {
+        isDancing = false;
     }
 }

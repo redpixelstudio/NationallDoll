@@ -188,10 +188,14 @@ namespace FarmingEngine
 
             //Set music
             AudioClip[] music_playlist = AssetData.Get().music_playlist;
-            if (music_playlist.Length > 0 && !TheAudio.Get().IsMusicPlaying("music"))
+            var audio = TheAudio.Get();
+            if (music_playlist != null && audio != null)
             {
-                AudioClip clip = music_playlist[Random.Range(0, music_playlist.Length)];
-                TheAudio.Get().PlayMusic("music", clip, 0.4f, false);
+                if (music_playlist.Length > 0 && !audio.IsMusicPlaying("music"))
+                {
+                    var clip = music_playlist[Random.Range(0, music_playlist.Length)];
+                    audio.PlayMusic("music", clip, 0.4f, false);
+                }
             }
 
             //Inventory durability

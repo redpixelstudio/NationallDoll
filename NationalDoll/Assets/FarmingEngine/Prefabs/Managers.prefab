@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760342933}
   - component: {fileID: 1760342934}
+  - component: {fileID: 2946928522955280076}
   m_Layer: 0
   m_Name: Rythm
   m_TagString: Untagged
@@ -45,14 +46,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenUsed: 0
-  canBeActivated: 1
-  rhythmObject: {fileID: 0}
+  canBeActivated: 0
+  songManager: {fileID: 0}
   playerControlsObject: {fileID: 5511775144176669967}
   cameraObject: {fileID: 0}
   playerObject: {fileID: 0}
-  blackSprite: {fileID: 0}
-  blackImage: {fileID: 0}
+  songChooser: {fileID: 2946928522955280076}
   uiObject: {fileID: 0}
+--- !u!114 &2946928522955280076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760342932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c5062a8682c4345b52a6b7ec23f345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SongItems:
+  - {fileID: 11400000, guid: 55e75ed5e7f253b4080948c6dba8ad8b, type: 2}
+  - {fileID: 11400000, guid: 04e71a50fc4a2ee49a290db26d391229, type: 2}
+  - {fileID: 11400000, guid: 504a620ec0a1cd54d8f9dea264ef69fa, type: 2}
+  choosingCanvas: {fileID: 0}
+  block: {fileID: 6009479956374905145, guid: db6c12abbb9799a4eb664d68c99ebf85, type: 3}
+  chosenSong: {fileID: 0}
 --- !u!1 &2946928521743776463
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &9171846025894188462
 Transform:
   m_ObjectHideFlags: 0

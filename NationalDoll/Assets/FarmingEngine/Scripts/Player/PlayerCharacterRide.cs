@@ -67,6 +67,7 @@ namespace FarmingEngine
                 riding_animal = animal;
                 transform.position = animal.GetRideRoot();
                 animal.SetRider(character);
+                RhythmController.I.uiObject.ToggleRide(true);
             }
         }
 
@@ -81,6 +82,7 @@ namespace FarmingEngine
                 character.EnableMovement();
                 character.EnableCollider();
                 riding_animal = null;
+                RhythmController.I.uiObject.ToggleRide(false);
             }
         }
 
