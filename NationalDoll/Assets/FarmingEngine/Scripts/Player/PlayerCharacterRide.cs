@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace FarmingEngine
@@ -34,6 +36,7 @@ namespace FarmingEngine
                 if (riding_animal == null || riding_animal.IsDead())
                 {
                     StopRide();
+
                     return;
                 }
 
@@ -45,7 +48,9 @@ namespace FarmingEngine
                 if (character.IsControlsEnabled())
                 {
                     if (controls.IsPressJump() || controls.IsPressAction() || controls.IsPressUICancel())
+                    {
                         StopRide();
+                    }
                 }
             }
         }
@@ -71,7 +76,7 @@ namespace FarmingEngine
             }
         }
 
-        public void StopRide()
+        public async void StopRide()
         {
             if (is_riding)
             {
@@ -81,8 +86,16 @@ namespace FarmingEngine
                 character.SetBusy(false);
                 character.EnableMovement();
                 character.EnableCollider();
-                riding_animal = null;
                 RhythmController.I.uiObject.ToggleRide(false);
+                for (var i = 0; i < 10; i++)
+                {
+                    while(Vector3.Distance(gameObject.transform.position, riding_animal.transform.position) < 1.25f)
+                    {
+                        gameObject.transform.position += gameObject.transform.right * 1.25f;
+                    }
+                    await Task.Delay(TimeSpan.FromSeconds(0.01f));
+                }
+                riding_animal = null;
             }
         }
 

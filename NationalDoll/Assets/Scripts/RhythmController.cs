@@ -19,7 +19,7 @@ public class RhythmController : MonoBehaviour
     [HideInInspector] public bool canBeActivated;
     
     [SerializeField] public SongManager songManager;
-    [SerializeField] private PlayerControls playerControlsObject;
+    [SerializeField] public PlayerControls playerControlsObject;
     [SerializeField] private TheCamera cameraObject;
     [SerializeField] public PlayerCharacter playerObject;
     [SerializeField] private SongChooser songChooser;

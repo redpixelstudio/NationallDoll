@@ -130,7 +130,8 @@ namespace FarmingEngine
 
         public void SetRider(PlayerCharacter player)
         {
-            if (rider == null) {
+            if (rider == null)
+            {
                 rider = player;
                 character.move_speed = ride_speed;
                 character.avoid_obstacles = false;
@@ -143,14 +144,14 @@ namespace FarmingEngine
             }
         }
 
-        public void StopRide()
+        public async void StopRide()
         {
             if (rider != null)
             {
-                rider = null;
                 character.move_speed = regular_speed;
                 character.avoid_obstacles = default_avoid;
                 character.use_navmesh = default_navmesh;
+                rider = null;
                 StopMove();
                 if (wild != null)
                     wild.enabled = true;
