@@ -162,7 +162,11 @@ namespace FarmingEngine
         public Vector2 ScreenPointToCanvasPos(Vector2 pos)
         {
             Vector2 localpoint;
+            Debug.Log(canvas.worldCamera);
+            Debug.Log(rect.rect);
             RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, pos, canvas.worldCamera, out localpoint);
+            Debug.Log(pos);
+            localpoint = new Vector2(pos.x, pos.y);
             return localpoint;
         }
 

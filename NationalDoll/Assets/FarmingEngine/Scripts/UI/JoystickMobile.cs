@@ -34,6 +34,7 @@ namespace FarmingEngine
             canvas.alpha = Mathf.MoveTowards(canvas.alpha, target_alpha, 4f * Time.deltaTime);
 
             Vector2 screenPos = controls.GetJoystickPos();
+            //Debug.Log(screenPos);
             rect.anchoredPosition = TheUI.Get().ScreenPointToCanvasPos(screenPos);
             pin.anchoredPosition = controls.GetJoystickDir() * 50f;
 

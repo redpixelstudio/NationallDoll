@@ -277,7 +277,7 @@ Transform:
   - {fileID: 6794886876075137361}
   - {fileID: 5780384211978555405}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!54 &6778699993473853968
 Rigidbody:
@@ -340,6 +340,7 @@ MonoBehaviour:
   interact_offset: 0
   action_ui: 1
   character_ride: {fileID: 0}
+  character_anim: {fileID: 0}
 --- !u!114 &114041981684017238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +507,7 @@ MonoBehaviour:
   ride_anim: Ride
   swim_anim: Swim
   climb_anim: Climb
+  animator: {fileID: 493179361306856055}
 --- !u!1 &7227525407929997585
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +933,12 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 234a458d2bc9de040834a24c42610268, type: 3}
+--- !u!95 &493179361306856055 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7175108369142178487, guid: 234a458d2bc9de040834a24c42610268,
+    type: 3}
+  m_PrefabInstance: {fileID: 7298992560966019264}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5780384211978555405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3851483538773457101, guid: 234a458d2bc9de040834a24c42610268,

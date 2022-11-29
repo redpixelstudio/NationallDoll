@@ -13,10 +13,12 @@ public class RhythmController : MonoBehaviour
     public static RhythmController I;
 
     [HideInInspector] public bool hasBeenUsed;
+
+    [HideInInspector] public bool isSongPaused;
     
     [HideInInspector] public bool canBeActivated;
     
-    [FormerlySerializedAs("rhythmObject")] [SerializeField] private SongManager songManager;
+    [SerializeField] public SongManager songManager;
     [SerializeField] private PlayerControls playerControlsObject;
     [SerializeField] private TheCamera cameraObject;
     [SerializeField] public PlayerCharacter playerObject;
@@ -81,7 +83,7 @@ public class RhythmController : MonoBehaviour
         while (isDancing)
         {
             playerObject.character_anim.animator.SetTrigger("Dance");
-            Debug.Log("Change Dance set!");
+            //Debug.Log("Change Dance set!");
             await Task.Delay(TimeSpan.FromSeconds(0.75));
         }
     }

@@ -1,10 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Events;
-using System.Threading.Tasks;
-using Task = System.Threading.Tasks.Task;
 
 namespace FarmingEngine
 {
