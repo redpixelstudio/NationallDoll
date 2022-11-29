@@ -15,7 +15,7 @@ public class SongChooser : MonoBehaviour
     [Header("Pause")]
     [SerializeField] private Sprite pauseOn;
     [SerializeField] private Sprite pauseOff;
-    [SerializeField] private Button pauseButton;
+    [SerializeField] public Button pauseButton;
 
     [HideInInspector] public SongItem chosenSong;
 

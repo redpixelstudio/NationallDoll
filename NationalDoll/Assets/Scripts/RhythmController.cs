@@ -154,6 +154,7 @@ public class RhythmController : MonoBehaviour
         ChangeEnergy(10);
         ChangeRhythmGameState(false);
         hasBeenUsed = true;
+        songChooser.pauseButton.gameObject.SetActive(false);
     }
 
     private void Start()
