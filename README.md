@@ -1,5 +1,5 @@
 # NationallDoll
-3D Unity game with farm simulator integrated with rhytm mini-game
+3D Unity game with farm simulator integrated with rhythm mini-game
 
 Created as freelance-order at 11/2022.
 ---
